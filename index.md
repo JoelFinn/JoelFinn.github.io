@@ -1,2 +1,12 @@
-### 个人信息
-姓名：廖俊锋 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人简历</title>
+    <style>
+      
+    </style>
+	</head>
+	<body>
+	</body>
+</html>
