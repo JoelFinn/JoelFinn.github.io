@@ -1,12 +1,2 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>个人简历</title>
-    <style>
-      
-    </style>
-	</head>
-	<body>
-	</body>
-</html>
+<link href="curriculumVitae.css" rel="stylesheet"></link>
+<h1>个人简历</h1>
