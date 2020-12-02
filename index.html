@@ -2,12 +2,149 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>个人简历</title>
+		<title>个人主页</title>
     <style>
-      
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #F2F2F2;
+      }
+      .container {
+        width: 800px;
+        height: 750px;
+        background-color: #fff;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 50px;
+      }
+      .part {
+        background-color: #4F94CD;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        transition: all 2s;
+        cursor: pointer;
+        text-shadow: 2px 2px 3px rgba(255, 255, 255, .6), -2px -2px 2px rgba(0, 0, 0, .6);
+      }
+      .part:hover {
+        background-color: #63B8FF;
+        width: 200px;
+      }
+      .item {
+        background-color: #63B8FF;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        border-radius: 50%;
+        transition: all 0.5s;
+        font-weight: 700;
+        color: #fff;
+        position: absolute;
+        left: 450px;
+        top: 60px;
+      }
+      .item:hover {
+        transform: scale(1.3);
+        border: 2px solid #ccc;
+        text-shadow: 2px 2px 3px rgba(255, 255, 255, .6), -2px -2px 2px rgba(0, 0, 0, .6);
+      }
+      .info {
+        position: relative;
+        height: 300px;
+        border-bottom: 1px solid #ccc;
+      }
+      .education {
+        animation: itemRotateOne 15s linear infinite;
+      }
+      .major {
+        animation: itemRotateTwo 15s linear infinite;
+      }
+      .status {
+        animation: itemRotateThree 15s linear infinite;
+      }
+      /* .education:hover,
+      .major:hover,
+      .status:hover {
+        animation-play-state: paused;
+      } */
+      @keyframes itemRotateOne {
+        from {
+          transform: rotate(0deg) translate(86px, -50px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translate(86px, -50px) rotate(-360deg);
+        }
+      }
+      @keyframes itemRotateTwo {
+        from {
+          transform: rotate(0deg) translate(0, 100px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translate(0, 100px) rotate(-360deg);
+        }
+      }
+      @keyframes itemRotateThree {
+        from {
+          transform: rotate(0deg) translate(-86px, -50px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translate(-86px, -50px) rotate(-360deg);
+        }
+      }
+      .skills {
+        margin-top: 50px;
+      }
+      .skill {
+        width: 100px;
+        height: 30px;
+        background-color: #63B8FF;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 5px;
+        float: left;
+        margin: 50px 6px;
+        color: #fff;
+        text-shadow: -1px -1px 2px rgba(255, 255, 255, .8), 1px 1px 2px rgba(0, 0, 0, .8);
+        transition: all .5s;
+      }
+      .skill:hover {
+        transform: scale(2) rotate(360deg);
+      }
     </style>
 	</head>
 	<body>
-  123
+    <div class="container">
+      <div class="info">
+        <div class="part">
+          <span>基本信息</span>
+        </div>
+        <div class="item education">本科</div>
+        <div class="item status">20应届</div>
+        <div class="item major">软件工程</div>
+        <div class="item name">廖俊锋</div>
+      </div>
+      <div class="skills">
+        <div class="part">
+          <span>技术了解</span>
+        </div>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">Javascript</div>
+        <div class="skill">vue</div>
+        <div class="skill">vuex</div>
+        <div class="skill">axios</div>
+        <div class="skill">vue-router</div>
+        <div class="skill">ElementUI</div>
+      </div>
+    </div>
+    
 	</body>
 </html>
