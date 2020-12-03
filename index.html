@@ -8,18 +8,32 @@
         margin: 0;
         padding: 0;
       }
+      li {
+        list-style: none;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        word-break:break-word;
+      }
       body {
-        background-color: #F2F2F2;
+        /* background-color: #F2F2F2; */
+        background-color: #cbe8df;
       }
       .container {
         width: 800px;
-        height: 750px;
-        background-color: #fff;
+        height: 588px;
+        /* background-color: #fff; */
+        background-color: #f1fffe;
         margin: 0 auto;
         position: relative;
-        padding-top: 50px;
+        padding-top: 10px;
       }
-      .part {
+      .container #title {
+        color: #d095ff;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, .8), -1px -1px  1px rgba(0, 0, 0, .8);
+      }
+      .container .part {
         background-color: #4F94CD;
         width: 100px;
         height: 40px;
@@ -31,13 +45,19 @@
         font-weight: 700;
         transition: all 2s;
         cursor: pointer;
-        text-shadow: 2px 2px 3px rgba(255, 255, 255, .6), -2px -2px 2px rgba(0, 0, 0, .6);
+        text-shadow: 1px 1px 4px rgba(255, 255, 255, .8), -1px -1px  4px rgba(0, 0, 0, .8);
       }
-      .part:hover {
-        background-color: #63B8FF;
+      .container .part:hover {
+        /* background-color: #63B8FF; */
+        background-color: #2d699a;
         width: 200px;
       }
-      .item {
+      #info {
+        position: relative;
+        height: 300px;
+        border-bottom: 1px solid #ccc;
+      }
+      #info .item {
         background-color: #63B8FF;
         width: 80px;
         height: 80px;
@@ -45,104 +65,282 @@
         text-align: center;
         border-radius: 50%;
         transition: all 0.5s;
+        font-size: 14px;
         font-weight: 700;
         color: #fff;
         position: absolute;
-        left: 450px;
-        top: 60px;
+        left: 350px;
+        top: 100px;
+        transform: translate(0, -80px);
+        cursor: pointer;
       }
       .item:hover {
-        transform: scale(1.3);
         border: 2px solid #ccc;
-        text-shadow: 2px 2px 3px rgba(255, 255, 255, .6), -2px -2px 2px rgba(0, 0, 0, .6);
+        text-shadow: 2px 2px 3px rgba(255, 255, 255, .6),
+                    -2px -2px 2px rgba(0, 0, 0, .6);
       }
-      .info {
-        position: relative;
-        height: 300px;
-        border-bottom: 1px solid #ccc;
+      
+      #info .name {
+        transform: translate(0, 0);
+        z-index: 99;
       }
-      .education {
-        animation: itemRotateOne 15s linear infinite;
+      #info .name:hover {
+        transform: scale(1.3);
       }
-      .major {
-        animation: itemRotateTwo 15s linear infinite;
+      #info ul .education {
+        animation: itemRotateOne 5s linear infinite;
       }
-      .status {
-        animation: itemRotateThree 15s linear infinite;
+      #info ul .major {
+        animation: itemRotateOne 5s linear infinite;
+        animation-delay: 1s;
       }
-      /* .education:hover,
-      .major:hover,
-      .status:hover {
-        animation-play-state: paused;
-      } */
+      #info ul .status {
+        animation: itemRotateOne 5s linear infinite;
+        animation-delay: 2s;
+      }
+      #info ul .cet-4 {
+        animation: itemRotateOne 5s linear infinite;
+        animation-delay: 3s;
+      }
+      #info ul .web {
+        animation: itemRotateOne 5s linear infinite;
+        animation-delay: 4s;
+      }
       @keyframes itemRotateOne {
         from {
-          transform: rotate(0deg) translate(86px, -50px) rotate(0deg);
+          transform: rotate(0deg) translate(0px, -80px) rotate(0deg);
         }
         to {
-          transform: rotate(360deg) translate(86px, -50px) rotate(-360deg);
+          transform: rotate(360deg) translate(0, -80px) rotate(-360deg);
         }
       }
-      @keyframes itemRotateTwo {
-        from {
-          transform: rotate(0deg) translate(0, 100px) rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg) translate(0, 100px) rotate(-360deg);
-        }
-      }
-      @keyframes itemRotateThree {
-        from {
-          transform: rotate(0deg) translate(-86px, -50px) rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg) translate(-86px, -50px) rotate(-360deg);
-        }
-      }
-      .skills {
+     
+      .container #skills {
         margin-top: 50px;
       }
-      .skill {
-        width: 100px;
+      #skills ul li {
+        margin: 10px 0;
+      }
+      #skills ul .skill {
+        font-size: 20px;
         height: 30px;
         background-color: #63B8FF;
         text-align: center;
         line-height: 30px;
         border-radius: 5px;
-        float: left;
-        margin: 50px 6px;
         color: #fff;
-        text-shadow: -1px -1px 2px rgba(255, 255, 255, .8), 1px 1px 2px rgba(0, 0, 0, .8);
+        text-shadow: -1px -1px 3px rgba(255, 255, 255, 1),
+                      1px 1px 3px rgba(0, 0, 0, 1);
         transition: all .5s;
+        margin: 140px 5px;
+        padding: 3px 10px;
+        position: relative;
       }
       .skill:hover {
         transform: scale(2) rotate(360deg);
+      }
+      .skill .line {
+        position: absolute;
+        background-color: #133bcc;
+        height: 3px;
+        width: 0px;
+        bottom: 0;
+        left: 0;
+        transition: all 1s;
+        border-radius: 5px;
+      }
+      .skill:hover .line {
+        width: 100%;
+      }
+      /* bubble */
+      .bubble {
+        /* box-shadow: 0 0 0 0.1px #0cf inset, 0 0 16px #0cf inset; */
+        box-shadow: 0 0 0 0.1em #0cf inset, 0 0 1.5em #0cf inset;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+        text-align: center;
+        display: inline-block;
+        color: #ccc;
+        cursor: pointer;
+        position: relative;
+        animation: bubbleFloat 5s linear infinite;
+        transition: transform 0.4s linear,width 0.8s, height 0.8s, font-size 0.4s linear, margin 0.4s linear;
+      }
+      .bubble a::before {
+        content: "";
+        display: block;
+        background-color: #fff;
+        width: 20px;
+        height: 10px;
+        position: absolute;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: rotate(-45deg);
+        opacity: 0.3;
+        top: 20%;
+        left: 20%;
+      }
+      .bubble:hover {
+        animation-play-state: paused;
+        width: 110px;
+        height: 110px;
+        font-size: 1.5em;
+        margin: -2.5px 0 0 -2.5px;
+      }
+      /* bubble public end */
+      #info .intention {
+        position: absolute;
+        left: 20px;
+        top: 100px;
+        box-shadow: 0 0 0 0.1em #79ff0c inset, 0 0 1.5em #79ff0c inset;
+        animation: bubbleFloat 6s alternate infinite;
+      }
+      #info .noexp {
+        position: absolute;
+        left: 140px;
+        top: 40px;
+        box-shadow: 0 0 0 0.1em #757ca7 inset, 0 0 1.5em #757ca7 inset;
+      }
+      
+      @keyframes bubbleFloat{
+        0% {
+          transform: translateY(0);
+        }
+        25% {
+          transform: translateY(5px);
+        }
+        50% {
+          transform: translateY(0);
+        }
+        75% {
+          transform: translateY(-5px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+        .dialog {
+        width: 210px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        position: absolute;
+        right: 20px;
+        border-radius: 5px;
+        border: 1px solid #CCCCCC;
+        color: #ccc;
+        cursor: pointer;
+      }
+      .dialog::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 15px 20px;
+        border-color: transparent transparent transparent #CCCCCC;
+        position: absolute;
+        top: 10px;
+        right: -40px;
+        z-index: 2;
+      }
+      .dialog::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-style: solid;
+        border-width: 20px 20px 15px 19px;
+        border-color: transparent transparent transparent #f1fffe;
+        top: 10px;
+        right: -38px;
+        z-index: 3;
+      }
+      .email {
+        top: 120px;
+      }
+      #skills .ProjectVue {
+        top: 380px;
+      }
+      #skills .projectCss {
+        top: 450px;
       }
     </style>
 	</head>
 	<body>
     <div class="container">
-      <div class="info">
+      <ul id="title">
+        <li><h1>个人主页</h1></li>
+      </ul>
+      <div id="info">
         <div class="part">
           <span>基本信息</span>
         </div>
-        <div class="item education">本科</div>
-        <div class="item status">20应届</div>
-        <div class="item major">软件工程</div>
-        <div class="item name">廖俊锋</div>
+        <div class="bubble intention">
+          <a>求职前端</a>
+        </div>
+        <div class="bubble noexp">
+          <a>暂无经验</a>
+        </div>
+        <ul id="round"> 
+          <li>
+            <a class="item name">廖俊锋</a>
+          </li>
+          <li>
+            <a class="item web">前端开发</a>
+          </li>
+          <li>
+            <a class="item cet-4">英语四级</a>
+          </li>
+          <li>
+            <a class="item status">20应届</a>
+          </li>
+          
+          <li>
+            <a class="item major">软件工程</a>
+          </li>
+          <li>
+            <a class="item education">本科</a>
+          </li>
+        </ul>
+        
+        <div class="dialog">
+          联系电话:17688114371
+        </div>
+        <div class="dialog email">
+          邮箱:l781387501@163.com
+        </div>
       </div>
-      <div class="skills">
+      <div id="skills">
         <div class="part">
           <span>技术了解</span>
         </div>
-        <div class="skill">HTML5</div>
-        <div class="skill">CSS3</div>
-        <div class="skill">Javascript</div>
-        <div class="skill">vue</div>
-        <div class="skill">vuex</div>
-        <div class="skill">axios</div>
-        <div class="skill">vue-router</div>
-        <div class="skill">ElementUI</div>
+          <ul>
+            <li class="skillList">       
+              <a href="#" class="skill"><div class="line"></div> HTML5 </a>
+              <a href="#" class="skill"><div class="line"></div> CSS3 </a>
+              <a href="#" class="skill"><div class="line"></div> SCSS </a>   
+            </li> 
+            <li class="skillList">
+              <a href="#" class="skill"><div class="line"></div> Javascript </a>
+              <a href="#" class="skill"><div class="line"></div> ElementUI </a>
+            </li>
+            <li class="skillList">
+              <a href="#" class="skill"><div class="line"></div> Vue </a>
+              <a href="#" class="skill"><div class="line"></div> vuex </a>
+              <a href="#" class="skill"><div class="line"></div> axios </a>
+              <a href="#" class="skill"><div class="line"></div> vue-router </a>
+            </li>
+          </ul>
+        
+        <div class="dialog ProjectVue">
+          <a href="http://joelfinn.github.io/vue-my-admin-template" target="_blank">Vue项目实例</a>
+        </div>
+        <div class="dialog projectCss">
+          <a href="#">H5+CSS3京东导航栏</a>
+        </div>
       </div>
     </div>
     
